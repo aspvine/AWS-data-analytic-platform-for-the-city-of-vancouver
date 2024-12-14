@@ -113,4 +113,8 @@ The image is a screenshot of an Amazon S3 bucket configuration page from the AWS
   - The query retrieves all rows from a table named `tra-user` in the `street_trees-datacatalog-sau` database.
   - The results include columns like `tree_id`, `civic_number`, `std_street`, `genus_name`, `species_name`, `common_name`, and neighborhood details.
   - The output confirms successful querying and displays 536 records.
+## data management and cost optimization
+![IMG-20241214-WA0016](https://github.com/user-attachments/assets/5d5c147e-4a24-4010-b2db-0ba35ad29f78)
 
+The image shows the "Lifecycle configuration" page for an Amazon S3 bucket. This page allows users to manage the lifecycle of objects stored in the bucket by defining rules that specify actions such as transitioning objects to another storage class, archiving them, or deleting them after a specified period of time. The page displays one lifecycle rule named "Move_To_Cheaper_Storage_Class," which is enabled. This rule applies to the entire bucket and transitions the current version of objects to the Glacier Flexible Retrieval storage class. There are options to view details, edit, delete, and create new lifecycle rules.
+This screenshot is part of a data management and cost optimization step within the street trees project. It involves configuring lifecycle rules to automate the transition of data to more cost-effective storage classes over time, ensuring efficient storage management while maintaining data accessibility and reducing costs.
