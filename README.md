@@ -22,7 +22,10 @@ as seen from the shot
 The image is a screenshot of an Amazon S3 (Simple Storage Service) bucket interface from the AWS Management Console. The interface displays a list of objects within this bucket, including their names, types, last modified dates, sizes, and storage classes. Some of the objects listed are:
 started 
 The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
+## data infrastructure set up
+![IMG-20241214-WA0008](https://github.com/user-attachments/assets/abe802fb-87de-4d80-8bd0-a627c88e801a)
 
+The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) dashboard. The dashboard displays a list of VPCs under the "Your VPCs" section. There are two VPCs listed: one named "Street_Trees-vpc" with the VPC ID  and an IPv4 CIDR of "10.0.0.0/27", and another unnamed VPC with the VPC ID "vpc-01ba463659f74488f" and an IPv4 CIDR of "172.31.0.0/16". Both VPCs are in the "Available" state and have "Block Public Access" set to "Off". The left sidebar contains various options related to the VPC, such as Subnets, Route tables, Internet gateways, and more. The top bar shows the current region as "N. Virginia" and the logged-in user details. The "Create VPC" button is also visible on the top right corner.
 3. **Crawler Setup**: AWS Glue crawlers are created to scan the data, infer schemas, and populate metadata in the AWS Data Catalog.
 4. **Schema Creation**: The crawlers extract schemas and automatically create tables in the AWS Data Catalog.
 5. **Querying Data**: Amazon Athena is used to run SQL queries on the structured data.
