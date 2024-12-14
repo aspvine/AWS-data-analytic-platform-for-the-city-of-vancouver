@@ -17,7 +17,12 @@ This project focuses on analyzing data related to street trees using AWS Glue, A
 1. **Data Ingestion**: Raw data is stored in Amazon S3 buckets.
    ![Data ingestion1](https://github.com/user-attachments/assets/1e2d8baf-2df3-49ff-a743-ce5849c81246)
 as seen from the shot
-2. 
+![Ingestion4](https://github.com/user-attachments/assets/381cf064-cee8-4bf4-a330-3cdd2d304fbd)
+
+The image is a screenshot of an Amazon S3 (Simple Storage Service) bucket interface from the AWS Management Console. The interface displays a list of objects within this bucket, including their names, types, last modified dates, sizes, and storage classes. Some of the objects listed are:
+started 
+The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
+
 3. **Crawler Setup**: AWS Glue crawlers are created to scan the data, infer schemas, and populate metadata in the AWS Data Catalog.
 4. **Schema Creation**: The crawlers extract schemas and automatically create tables in the AWS Data Catalog.
 5. **Querying Data**: Amazon Athena is used to run SQL queries on the structured data.
