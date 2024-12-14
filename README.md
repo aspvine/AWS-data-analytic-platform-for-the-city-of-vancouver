@@ -69,13 +69,40 @@ The interface provides options to copy the S3 URI, copy the URL, download, open,
 ![Profiling2](https://github.com/user-attachments/assets/dbb5767b-9994-47d0-b022-85985eef9781)
 
 The image shows an Amazon S3 (Simple Storage Service) console interface. The specific bucket being viewed is named "van-sttrs-raw-sau." The interface displays two folders within this bucket: "ingestion_year=1991/" and "Street_Trees_ClickStreams/". The interface provides options to perform actions such as copying the S3 URI, copying the URL, downloading, opening, deleting, and creating folders. There is also an option to upload files.
+
+![IMG-20241214-WA0015](https://github.com/user-attachments/assets/ea74a615-fd4f-4f54-a7e0-227f51795858)
+
+The image shows a screenshot of the Amazon S3 (Simple Storage Service) management console. It specifically displays the configuration details for a bucket named "van-sttrs-raw-sau." The image highlights two main sections: Lifecycle rules and Replication rules.
+
+1. **Lifecycle Rules:**
+   - **Lifecycle rule name:** Move_To_Cheaper_Storage_Class
+   - **Status:** Enabled
+   - **Scope:** Entire bucket
+   - **Current version action:** Transition to Glacier Flex
+   - **Noncurrent version action:** (empty)
+   - **Expired object delete markers:** (empty)
+   - **Incomplete multipart uploads:** (empty)
+   - There is a link to "View lifecycle configuration."
+
+2. **Replication Rules:**
+   - **Replication rule name:** street-trees-reprul-sau
+   - **Status:** Enabled
+   - **Destination bucket:** s3://van-sttrs-raw-back-sau
+   - **Destination Region:** US East (N. Virginia) us-east-1
+   - **Priority:** 0
+   - **Scope:** Entire bucket
+   - **Storage class:** Same as source
+   - **Replica owner:** Same as source
+   - **Replication Time Control:** Disabled
+   - **KMS-encrypted objects (SSE-KMS or DSSE-KMS):** Replicate
+   - **Replicate modifications sync:** Disabled
+
+
 ## Data security
 ![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
 
 The image is a screenshot of an Amazon S3 bucket configuration page from the AWS Management Console. It shows the settings for the bucket named "van-sttrs-raw-sau" in the N. Virginia region. The "Default encryption" section indicates that server-side encryption is automatically applied to new objects stored in this bucket using AWS Key Management Service (KMS) keys (SSE-KMS). The encryption key ARN is provided, and the bucket key is enabled, which helps reduce encryption costs by lowering calls to AWS KMS. The left sidebar lists various S3 features and settings, such as General purpose buckets, Access Points, and Storage Lens. The "Intelligent-Tiering Archive configurations" section at the bottom is empty, with options to view details, edit, delete, or create a configuration.
 
-This screenshot is part of a data security step within AWS, specifically focusing on the configuration and management of encryption settings for the S3 bucket to ensure data protection and compliance
-The interface includes options to view details, run the job, perform actions, 
 ### 2. Amazon Athena Query Results
 ![IMG-20241214-WA0024](https://github.com/user-attachments/assets/66c67a2d-7a29-40da-b088-4523bb5b6de5)
 
