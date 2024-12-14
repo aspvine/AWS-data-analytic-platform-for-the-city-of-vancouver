@@ -1,77 +1,41 @@
-# AWS Data Analytic Platform for The City of Vancouver
+# Project Title: Street Trees Data Analysis with AWS Glue and Amazon Athena
 
-## Project Description
+## Project Overview
+This project focuses on analyzing street tree data using AWS Glue for data cataloging and Amazon Athena for querying and exploration. The primary goal is to streamline data processing, enable efficient querying, and gain insights into the attributes and distribution of trees across various neighborhoods.
 
-The City of Vancouver requires a migration to AWS to implement a robust data analytic platform (DAP). As the hired data team, we aim to:
+## Tools and Technologies Used
+- **AWS Glue**: Used for creating crawlers, building the Data Catalog, and preparing datasets for analysis.
+- **Amazon Athena**: A serverless query service used to run SQL queries on data stored in AWS Glue Data Catalog.
+- **Data Sources**: Street tree datasets containing attributes like tree species, location (civic number, street), plant area, and neighborhood.
 
-1. Design and implement the data analytic platform.
-2. Prepare a comprehensive report documenting the work.
+---
 
-Step 1: DAP Design and Implementation
- Table 1: Requirements for the Data Analytic Platform
-| Requirement # | Requirement Description |
-|---------------|--------------------------|
-| Req #1        | Design and implement a data analytic platform to support descriptive analysis. |
-| Req #2        | Add a feature to the platform to support exploratory analysis. 
+## Project Steps
+### 1. **Data Catalog Creation using AWS Glue**
+In this phase, AWS Glue Crawlers were created to automatically discover and catalog the datasets. The crawlers successfully scanned the data, extracted the schema, and created metadata tables in the AWS Glue Data Catalog.
 
-| Req #3        | Calculate the monthly cost of running this platform in AWS. |
-Step 2: Report Structure
+**Screenshot Details:**
+- **Crawlers**: Three crawlers (`street-trees-1991-c`, `street-trees-1991-r`, `street-trees-trncra`) were created and ran successfully, resulting in the creation of metadata tables.
+- **State**: All crawlers are in the "Ready" state, and the last run status shows "Succeeded".
+- **Tables Created**: 7 and 8 tables were added to the catalog by respective crawlers.
 
-The report will include the following sectionsFirst Page
-1. **Introduction**  
-   Explanation of the role and importance of the DAP for the City of Vancouver and an outline of the steps taken.
+---
 
-2. **DAP Design and Implementation**  
-   Each individual will contribute to the descriptive and exploratory analysis sections using a consistent four-step structure:
-   - **Step 1: Data Ingestion**
-   - **Step 2: Data Profiling**
-   - **Step 3: Data Cleaning**
-   - **Step 4: Data Pipeline Design**
+### 2. **Data Querying and Exploration using Amazon Athena**
+In this step, Amazon Athena was used to run SQL queries on the data cataloged by AWS Glue. The query editor was utilized to explore the dataset.
 
-3. **DAP Estimated Cost**  
-   Use AWS Pricing Calculator to estimate costs for the platform.
+**Screenshot Details:**
+- **Query Executed**: `SELECT * FROM "tra-user"`
+- **Database**: `street_trees-datacatalog-sau`
+- **Results**: The query returned 536 rows, showing key columns such as:
+  - `tree_id`
+  - `civic_number`
+  - `std_street`
+  - `genus_name`, `species_name`, `cultivar_name`
+  - `common_name`
+  - `neighbourhood_name`
+- **Query Performance**: The query completed in 1.024 seconds, scanning approximately 127.28 KB of data.
 
-4. **Assignment Rubrics**  
-   Breakdown of evaluation criteria for the work.
-
-## Report Content
-
-### 1. Introduction
-Briefly explain:
-- The importance of developing a data analytic platform for the City of Vancouver.
-- Steps for designing and implementing the platform.
-
-### 2. DAP Design and Implementation
-
-#### Descriptive Analysis
-- Selected question and components.
-- Data analytic platform design using **draw.io** (diagram and explanation).
-  
-**Four Steps:**
-1. **Data Ingestion**: Implementation screenshots and explanation.
-2. **Data Profiling**: Implementation screenshots and explanation.
-3. **Data Cleaning**: Implementation screenshots and explanation.
-4. **Data Pipeline Design**: Implementation screenshots and explanation.
-
-#### Exploratory Analysis
-- Selected question and components.
-- Data analytic platform design using **draw.io** (diagram and explanation).
-  
-**Four Steps:**
-1. **Data Ingestion**: Implementation screenshots and explanation.
-2. **Data Profiling**: Implementation screenshots and explanation.
-3. **Data Cleaning**: Implementation screenshots and explanation.
-4. **Data Pipeline Design**: Implementation screenshots and explanation.
-
-### 3. DAP Estimated Cost
-- Use the **AWS Pricing Calculator** to estimate costs for:
-  - Data ingestion.
-  - Data storage.
-  - Data processing and pipeline design.
-- Explain cost parameters and share a detailed breakdown.
-
-#### Individual Work Part (100%)
-- Contribution to the DAP design, descriptive analysis, exploratory analysis, and cost estimation.
-
+---
 
 
