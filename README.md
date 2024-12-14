@@ -34,7 +34,13 @@ The image shows the AWS Management Console, specifically the VPC (Virtual Privat
 4. **Schema Creation**: The crawlers extract schemas and automatically create tables in the AWS Data Catalog.
 5. **Querying Data**: Amazon Athena is used to run SQL queries on the structured data.
 
----
+![Design3](https://github.com/user-attachments/assets/41308cb1-baf6-4e26-8eb3-a0661166777e)
+
+The image shows the Amazon Web Services (AWS) Management Console, specifically the EC2 Instances dashboard. This dashboard displays a list of running EC2 instances. The relevant details include:
+
+Two instances are listed.
+
+Both instances are in the "Running" state.
 
 ## data process
 ###![Extraction1](https://github.com/user-attachments/assets/1bb1f7cf-77b6-4e5e-bf20-a2f7c26ee965)
