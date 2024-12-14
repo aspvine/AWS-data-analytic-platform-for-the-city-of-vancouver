@@ -1,3 +1,0 @@
-![Exploratory data profiling](https://github.com/user-attachments/assets/c051b24e-3115-4e8a-9dbb-0a9bc38de109)
-
-The image displays the Amazon Athena query editor interface, where a SQL query is being constructed and executed. The query shown is designed to retrieve data from a table named "tra-user." On the left side of the screen, there are options for selecting data sources and managing tables, while the main area shows the SQL script. Below, a results grid indicates that the query has been executed successfully, returning a dataset with multiple attributes related to street trees, such as civic numbers, street names, genus, species, and plant area. The execution metadata also highlights performance metrics like time in queue and data scanned.
