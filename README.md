@@ -104,6 +104,8 @@ The image shows a screenshot of the Amazon S3 (Simple Storage Service) managemen
 ![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
 
 The image is a screenshot of an Amazon S3 bucket configuration page from the AWS Management Console. It shows the settings for the bucket named "van-sttrs-raw-sau" in the N. Virginia region. The "Default encryption" section indicates that server-side encryption is automatically applied to new objects stored in this bucket using AWS Key Management Service (KMS) keys (SSE-KMS). The encryption key ARN is provided, and the bucket key is enabled, which helps reduce encryption costs by lowering calls to AWS KMS. The left sidebar lists various S3 features and settings, such as General purpose buckets, Access Points, and Storage Lens. The "Intelligent-Tiering Archive configurations" section at the bottom is empty, with options to view details, edit, delete, or create a configuration.
+![IMG-20241214-WA0019](https://github.com/user-attachments/assets/fab8fe7a-26bf-4c54-99da-7a7d74afcc7a)
+This screenshot is part of a data security step within the street trees project. It involves creating and managing encryption keys in AWS KMS to ensure secure data handling and encryption practices. The keys created here will be used to encrypt and decrypt sensitive data, providing a layer of security for the project's data assets.
 
 ### 2. Amazon Athena Query Results
 ![IMG-20241214-WA0024](https://github.com/user-attachments/assets/66c67a2d-7a29-40da-b088-4523bb5b6de5)
