@@ -1,4 +1,4 @@
-# Project Title: Street Trees Data Analysis with AWS Glue and Amazon Athena
+# Project Title: AWS Data Analytic Platform for The City of vancouver
 
 ## Project Overview
 This project focuses on analyzing street tree data using AWS Glue for data cataloging and Amazon Athena for querying and exploration. The primary goal is to streamline data processing, enable efficient querying, and gain insights into the attributes and distribution of trees across various neighborhoods.
