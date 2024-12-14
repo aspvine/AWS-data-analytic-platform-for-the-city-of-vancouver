@@ -12,7 +12,9 @@ Step 1: DAP Design and Implementation
 | Requirement # | Requirement Description |
 |---------------|--------------------------|
 | Req #1        | Design and implement a data analytic platform to support descriptive analysis. |
-| Req #2        | Add a feature to the platform to support exploratory analysis. |
+| Req #2        | Add a feature to the platform to support exploratory analysis. 
+![IMG-20241214-WA0023](https://github.com/user-attachments/assets/d98891e6-7fa0-4374-bc2e-e437414dacfe)
+
 | Req #3        | Calculate the monthly cost of running this platform in AWS. |
 Step 2: Report Structure
 
