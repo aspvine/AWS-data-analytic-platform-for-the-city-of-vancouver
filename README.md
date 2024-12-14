@@ -105,7 +105,9 @@ The image shows a screenshot of the Amazon S3 (Simple Storage Service) managemen
    - **Replication Time Control:** Disabled
    - **KMS-encrypted objects (SSE-KMS or DSSE-KMS):** Replicate
    - **Replicate modifications sync:** Disabled
+![IMG-20241214-WA0022](https://github.com/user-attachments/assets/a97b6293-2e2e-45b1-8d93-242e8830ac8f)
 
+The image shows the Amazon S3 (Simple Storage Service) management console, specifically the "Buckets" section. It lists several general-purpose buckets along with their names, AWS regions, IAM Access Analyzer links, and creation dates. The buckets are located in the US East (N. Virginia) region (us-east-1). The interface also includes options to copy the ARN, empty, delete, or create a new bucket
 
 ## Data security
 ![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
