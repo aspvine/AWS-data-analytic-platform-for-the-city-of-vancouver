@@ -1,1 +1,3 @@
+![Data exploratory-ingestion2](https://github.com/user-attachments/assets/227faee4-63b9-46e8-a43a-d54f9dbabdc8)
 
+the screenshot shows the **AWS Glue Crawlers** interface, where crawlers are used to scan and classify the data stored in a data source (e.g., S3 buckets). The crawlers successfully analyze the data, determine its schema, and create metadata tables in the AWS Glue Data Catalog, as indicated by the “Succeeded” state and the table changes column (7 and 8 tables created). This step is crucial for understanding the structure of the ingested data, enabling further profiling and preparation for downstream analysis, such as cleaning and pipeline design.
