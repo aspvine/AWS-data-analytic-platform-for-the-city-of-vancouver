@@ -51,6 +51,10 @@ This job is part of a data transformation step within AWS DataBrew. In this step
 The image is a screenshot of an Amazon S3 console, showing the contents of a bucket named "van-sttrs-tra-sau" within the folder "Street_Trees/Data-Cleaning/User/". This folder contains one object named "van-sttrs-sau_26Nov2024_1732606239969/", which is a subfolder. The console provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the objects. The navigation breadcrumbs at the top indicate the path within the S3 bucket.
 
 This screenshot is part of a data storage and organization step within the same project related to street trees. Specifically, this step involves managing and structuring the cleaned data in an Amazon S3 bucket after it has undergone transformation processes. The organized folder structure helps maintain version control and easy access to the processed datasets for further analysis or use
+![Design2](https://github.com/user-attachments/assets/2f2f9ca0-828b-49b5-a524-3688637eb90d)
+The image shows an Amazon S3 (Simple Storage Service) interface from AWS (Amazon Web Services). The specific view is of a bucket named "van-sttrs-tra-sau" with a folder named "Street_Trees/Planted_Trees_As_Per_Street_Side_Name/System/". The "Objects" tab is selected, displaying 
+ The storage class for both files is "Standard".
+The interface provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the files. There are also options to create a folder and upload files. The left sidebar includes various sections such as Buckets, Access Grants, Access Points, and Storage Lens, among others.
 ## Data security
 ![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
 
