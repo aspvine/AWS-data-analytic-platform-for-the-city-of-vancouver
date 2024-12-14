@@ -1,5 +1,5 @@
 
-# AWS Data Analytic Platform for The City of vancouver
+# Data-analyst-saurabh
 ## Project Overview
 This project focuses on analyzing data related to street trees using AWS Glue, Amazon Athena, and AWS Data Catalog. The workflow includes data ingestion, schema creation, and querying the data to derive insights.
 
