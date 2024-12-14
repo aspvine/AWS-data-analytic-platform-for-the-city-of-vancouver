@@ -23,8 +23,9 @@ This project focuses on analyzing data related to street trees using AWS Glue, A
 
 ## Screenshots and Explanations
 
-### 1. AWS Glue Crawlers Setup
-![AWS Glue Crawlers](screenshot1.png)
+###![Extraction1](https://github.com/user-attachments/assets/1bb1f7cf-77b6-4e5e-bf20-a2f7c26ee965)
+ 1. AWS Glue Crawlers Setup
+
 - **Description**: The screenshot shows the list of AWS Glue Crawlers used to scan the datasets.
 - **Details**:
   - Three crawlers are displayed with their respective statuses as **Ready**.
