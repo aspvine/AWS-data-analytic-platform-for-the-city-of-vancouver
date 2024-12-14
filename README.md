@@ -57,6 +57,13 @@ Both instances are in the "Running" state.
 ![Data ingestion2](https://github.com/user-attachments/assets/95ee2cec-e540-42f8-8ffa-7d3d4375ef02)
 The image is a screenshot of the AWS DataBrew interface, specifically showing the "Jobs" section. It displays a list of "Recipe jobs" with one job listed. The job name is "van-sttrs-sau," and its status is marked as "Succeeded" with a green checkmark. The job's input includes a project named "van-sttrs-dtp..." and a dataset named "Street-Trees." The job output indicates "1 output." The last run of this job was 7 minutes ago, on November 25, 2024, at 11:31 PM. The job was created 9 minutes ago, on the same date, at 11:28 PM, by a user named "voclabs."
 This job is part of a data transformation step within AWS DataBrew. In this step, data from the "Street-Trees" dataset is processed and transformed according to the recipe defined in the project. The purpose of this step is to clean, enrich, or restructure the raw data to prepare it for further analysis, reporting, or machine learning tasks.
+
+![IMG-20241214-WA0021](https://github.com/user-attachments/assets/0671106f-079f-4332-9763-18c40076b005)
+
+The image shows an AWS Glue Studio interface with a visual representation of an ETL (Extract, Transform, Load) job named "Van-StTrs-Etl-Sau." The interface includes several tabs such as Visual, Script, Job details, Runs, Data quality, Schedules, Version Control, and Upgrade analysis - preview
+
+
+
 ## data storage and organization
 ![Cleaning1](https://github.com/user-attachments/assets/92da8f39-8bcc-4473-befe-4c9416d69bd7)
 
