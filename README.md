@@ -59,6 +59,10 @@ This screenshot is part of a data storage and organization step within the same 
 The image shows an Amazon S3 (Simple Storage Service) interface from AWS (Amazon Web Services). The specific view is of a bucket named "van-sttrs-tra-sau" with a folder named "Street_Trees/Planted_Trees_As_Per_Street_Side_Name/System/". The "Objects" tab is selected, displaying 
  The storage class for both files is "Standard".
 The interface provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the files. There are also options to create a folder and upload files. The left sidebar includes various sections such as Buckets, Access Grants, Access Points, and Storage Lens, among others.
+## data management
+![Profiling2](https://github.com/user-attachments/assets/dbb5767b-9994-47d0-b022-85985eef9781)
+
+The image shows an Amazon S3 (Simple Storage Service) console interface. The specific bucket being viewed is named "van-sttrs-raw-sau." The interface displays two folders within this bucket: "ingestion_year=1991/" and "Street_Trees_ClickStreams/". The interface provides options to perform actions such as copying the S3 URI, copying the URL, downloading, opening, deleting, and creating folders. There is also an option to upload files.
 ## Data security
 ![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
 
