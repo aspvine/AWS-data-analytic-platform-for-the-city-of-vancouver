@@ -22,6 +22,8 @@ as seen from the shot
 The image is a screenshot of an Amazon S3 (Simple Storage Service) bucket interface from the AWS Management Console. The interface displays a list of objects within this bucket, including their names, types, last modified dates, sizes, and storage classes. Some of the objects listed are:
 started 
 The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
+![IMG-20241214-WA0013](https://github.com/user-attachments/assets/455e4625-9908-4469-8d48-b7e92f6b0c69)
+This screenshot is part of a data ingestion step within the street trees project. It involves uploading and organizing CSV files into an S3 bucket to store the raw data. This data will later be used in subsequent steps of the project for processing, analysis, or reporting.
 ## data Profiling
 ![Profiling 1](https://github.com/user-attachments/assets/8aa44664-dcb2-41f0-b782-0256a32477ab)
 
