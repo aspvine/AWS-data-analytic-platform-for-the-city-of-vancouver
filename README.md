@@ -120,3 +120,8 @@ This screenshot is part of a data security step within the street trees project.
 
 The image shows the "Lifecycle configuration" page for an Amazon S3 bucket. This page allows users to manage the lifecycle of objects stored in the bucket by defining rules that specify actions such as transitioning objects to another storage class, archiving them, or deleting them after a specified period of time. The page displays one lifecycle rule named "Move_To_Cheaper_Storage_Class," which is enabled. This rule applies to the entire bucket and transitions the current version of objects to the Glacier Flexible Retrieval storage class. There are options to view details, edit, delete, and create new lifecycle rules.
 This screenshot is part of a data management and cost optimization step within the street trees project. It involves configuring lifecycle rules to automate the transition of data to more cost-effective storage classes over time, ensuring efficient storage management while maintaining data accessibility and reducing costs.
+## data connectivity 
+![IMG-20241214-WA0020](https://github.com/user-attachments/assets/7fb90a55-d0e5-46a4-9846-8704c023aad4)
+
+The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) Endpoints section. The console displays details about a specific VPC endpoint named "street-trees-s3endpoint-sau."
+This screenshot is part of a data connectivity step within the street trees project. This step involves configuring VPC endpoints to establish secure and efficient connections between the VPC and AWS services, in this case, Amazon S3. This ensures that data can be accessed and transferred within the private network without exposing it to the internet, enhancing security and performance
