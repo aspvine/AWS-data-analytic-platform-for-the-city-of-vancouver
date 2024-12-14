@@ -22,6 +22,10 @@ as seen from the shot
 The image is a screenshot of an Amazon S3 (Simple Storage Service) bucket interface from the AWS Management Console. The interface displays a list of objects within this bucket, including their names, types, last modified dates, sizes, and storage classes. Some of the objects listed are:
 started 
 The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
+## data Profiling
+![Profiling 1](https://github.com/user-attachments/assets/8aa44664-dcb2-41f0-b782-0256a32477ab)
+
+The image shows an Amazon S3 (Simple Storage Service) interface displaying the contents of a bucket named "van-sttrs-tra-sau" under the folder path "Street_Trees/Data-Profiling/User/". The interface is in the "Objects" tab, which lists the objects stored in this directory
 ## data infrastructure set up
 ![IMG-20241214-WA0008](https://github.com/user-attachments/assets/abe802fb-87de-4d80-8bd0-a627c88e801a)
 
