@@ -18,7 +18,7 @@ Let’s assume that The City of Vancouver needs to migrate to AWS. They hired yo
 
 ---
 # DESCRIPTIVE ANALYSIS
-1. **Data Ingestion**: Raw data is stored in Amazon S3 buckets.
+## Data Ingestion: Raw data is stored in Amazon S3 buckets.
    ![Data ingestion1](https://github.com/user-attachments/assets/1e2d8baf-2df3-49ff-a743-ce5849c81246)
 as seen from the shot
 ![Ingestion4](https://github.com/user-attachments/assets/381cf064-cee8-4bf4-a330-3cdd2d304fbd)
