@@ -1,5 +1,8 @@
 
 # Data-analyst-saurabh
+
+# DAP design and implementation
+##Introduction
 ## Project Overview
 This project focuses on analyzing data related to street trees using AWS Glue, Amazon Athena, and AWS Data Catalog. The workflow includes data ingestion, schema creation, and querying the data to derive insights.
 Let’s assume that The City of Vancouver needs to migrate to AWS. They hired you as the data team to implement a data analytic platform. We need to follow the following steps to help them reach their goals.
@@ -14,8 +17,7 @@ Let’s assume that The City of Vancouver needs to migrate to AWS. They hired yo
 - **S3 Storage**: The primary data source for storing raw data.
 
 ---
-
-## Project Workflow
+# DESCRIPTIVE ANALYSIS
 1. **Data Ingestion**: Raw data is stored in Amazon S3 buckets.
    ![Data ingestion1](https://github.com/user-attachments/assets/1e2d8baf-2df3-49ff-a743-ce5849c81246)
 as seen from the shot
@@ -24,13 +26,17 @@ as seen from the shot
 The image is a screenshot of an Amazon S3 (Simple Storage Service) bucket interface from the AWS Management Console. The interface displays a list of objects within this bucket, including their names, types, last modified dates, sizes, and storage classes. Some of the objects listed are:
 started 
 The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
-![IMG-20241214-WA0013](https://github.com/user-attachments/assets/455e4625-9908-4469-8d48-b7e92f6b0c69)
-This screenshot is part of a data ingestion step within the street trees project. It involves uploading and organizing CSV files into an S3 bucket to store the raw data. This data will later be used in subsequent steps of the project for processing, analysis, or reporting.
+
 ## Data Profiling
 ![Profiling 1](https://github.com/user-attachments/assets/8aa44664-dcb2-41f0-b782-0256a32477ab)
 
 The image shows an Amazon S3 (Simple Storage Service) interface displaying the contents of a bucket named "van-sttrs-tra-sau" under the folder path "Street_Trees/Data-Profiling/User/". The interface is in the "Objects" tab, which lists the objects stored in this directory
-## Data infrastructure set up
+
+## Data cleaning
+![Data ingestion2](https://github.com/user-attachments/assets/95ee2cec-e540-42f8-8ffa-7d3d4375ef02)
+The image is a screenshot of the AWS DataBrew interface, specifically showing the "Jobs" section. It displays a list of "Recipe jobs" with one job listed. The job name is "van-sttrs-sau," and its status is marked as "Succeeded" with a green checkmark. The job's input includes a project named "van-sttrs-dtp..." and a dataset named "Street-Trees." The job output indicates "1 output." The last run of this job was 7 minutes ago, on November 25, 2024, at 11:31 PM. The job was created 9 minutes ago, on the same date, at 11:28 PM, by a user named "voclabs."
+This job is part of a data transformation step within AWS DataBrew. In this step, data from the "Street-Trees" dataset is processed and transformed according to the recipe defined in the project. The purpose of this step is to clean, enrich, or restructure the raw data to prepare it for further analysis, reporting, or machine learning tasks.
+## Data pipeline design
 ![IMG-20241214-WA0008](https://github.com/user-attachments/assets/abe802fb-87de-4d80-8bd0-a627c88e801a)
 
 The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) dashboard. The dashboard displays a list of VPCs under the "Your VPCs" section. There are two VPCs listed: one named "Street_Trees-vpc" with the VPC ID  and an IPv4 CIDR of "10.0.0.0/27", and another unnamed VPC with the VPC ID "vpc-01ba463659f74488f" and an IPv4 CIDR of "172.31.0.0/16". Both VPCs are in the "Available" state and have "Block Public Access" set to "Off". The left sidebar contains various options related to the VPC, such as Subnets, Route tables, Internet gateways, and more. The top bar shows the current region as "N. Virginia" and the logged-in user details. The "Create VPC" button is also visible on the top right corner.
@@ -45,8 +51,14 @@ The image shows the Amazon Web Services (AWS) Management Console, specifically t
 Two instances are listed.
 
 Both instances are in the "Running" state.
+# EXPLORATORY ANALYSIS
 
-## Data process
+## Data injestion
+
+![IMG-20241214-WA0013](https://github.com/user-attachments/assets/455e4625-9908-4469-8d48-b7e92f6b0c69)
+This screenshot is part of a data ingestion step within the street trees project. It involves uploading and organizing CSV files into an S3 bucket to store the raw data. This data will later be used in subsequent steps of the project for processing, analysis, or reporting.
+
+## Data profiling
 ###![Extraction1](https://github.com/user-attachments/assets/1bb1f7cf-77b6-4e5e-bf20-a2f7c26ee965)
  1. AWS Glue Crawlers Setup
 
@@ -55,18 +67,14 @@ Both instances are in the "Running" state.
   - Three crawlers are displayed with their respective statuses as **Ready**.
   - Each crawler scans a specific dataset and updates the table schemas.
   - The results of the last run show tables created in the Data Catalog.
-### Data transformation
-![Data ingestion2](https://github.com/user-attachments/assets/95ee2cec-e540-42f8-8ffa-7d3d4375ef02)
-The image is a screenshot of the AWS DataBrew interface, specifically showing the "Jobs" section. It displays a list of "Recipe jobs" with one job listed. The job name is "van-sttrs-sau," and its status is marked as "Succeeded" with a green checkmark. The job's input includes a project named "van-sttrs-dtp..." and a dataset named "Street-Trees." The job output indicates "1 output." The last run of this job was 7 minutes ago, on November 25, 2024, at 11:31 PM. The job was created 9 minutes ago, on the same date, at 11:28 PM, by a user named "voclabs."
-This job is part of a data transformation step within AWS DataBrew. In this step, data from the "Street-Trees" dataset is processed and transformed according to the recipe defined in the project. The purpose of this step is to clean, enrich, or restructure the raw data to prepare it for further analysis, reporting, or machine learning tasks.
 
+## Data cleaning
 ![IMG-20241214-WA0021](https://github.com/user-attachments/assets/0671106f-079f-4332-9763-18c40076b005)
 
 The image shows an AWS Glue Studio interface with a visual representation of an ETL (Extract, Transform, Load) job named "Van-StTrs-Etl-Sau." The interface includes several tabs such as Visual, Script, Job details, Runs, Data quality, Schedules, Version Control, and Upgrade analysis - preview
 
 
-
-## Data storage and organization
+## Data pipeline and design
 ![Cleaning1](https://github.com/user-attachments/assets/92da8f39-8bcc-4473-befe-4c9416d69bd7)
 
 The image is a screenshot of an Amazon S3 console, showing the contents of a bucket named "van-sttrs-tra-sau" within the folder "Street_Trees/Data-Cleaning/User/". This folder contains one object named "van-sttrs-sau_26Nov2024_1732606239969/", which is a subfolder. The console provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the objects. The navigation breadcrumbs at the top indicate the path within the S3 bucket.
@@ -76,6 +84,8 @@ This screenshot is part of a data storage and organization step within the same 
 The image shows an Amazon S3 (Simple Storage Service) interface from AWS (Amazon Web Services). The specific view is of a bucket named "van-sttrs-tra-sau" with a folder named "Street_Trees/Planted_Trees_As_Per_Street_Side_Name/System/". The "Objects" tab is selected, displaying 
  The storage class for both files is "Standard".
 The interface provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the files. There are also options to create a folder and upload files. The left sidebar includes various sections such as Buckets, Access Grants, Access Points, and Storage Lens, among others.
+
+
 ## Data management
 ![Profiling2](https://github.com/user-attachments/assets/dbb5767b-9994-47d0-b022-85985eef9781)
 
@@ -110,15 +120,13 @@ The image shows a screenshot of the Amazon S3 (Simple Storage Service) managemen
 ![IMG-20241214-WA0022](https://github.com/user-attachments/assets/a97b6293-2e2e-45b1-8d93-242e8830ac8f)
 
 The image shows the Amazon S3 (Simple Storage Service) management console, specifically the "Buckets" section. It lists several general-purpose buckets along with their names, AWS regions, IAM Access Analyzer links, and creation dates. The buckets are located in the US East (N. Virginia) region (us-east-1). The interface also includes options to copy the ARN, empty, delete, or create a new bucket
+## Data enriching 
+### Data visualization
+![IMG-20241214-WA0023](https://github.com/user-attachments/assets/aa98e532-85ac-4ddc-8995-20f72b4b4103)
+The image shows a bar chart from a data analysis tool, configured to display the count of different tree species planted over time. The X-axis represents the date planted, broken down by month for the year 2019. The Y-axis represents the count of trees planted. Each species is represented by a different color, as indicated by the legend at the bottom of the chart. The chart highlights that the highest number of trees were planted in December 2019, followed by February 2019, with the most frequently planted species represented in colors such as green, yellow, and red.
 
-## Data security
-![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
-
-The image is a screenshot of an Amazon S3 bucket configuration page from the AWS Management Console. It shows the settings for the bucket named "van-sttrs-raw-sau" in the N. Virginia region. The "Default encryption" section indicates that server-side encryption is automatically applied to new objects stored in this bucket using AWS Key Management Service (KMS) keys (SSE-KMS). The encryption key ARN is provided, and the bucket key is enabled, which helps reduce encryption costs by lowering calls to AWS KMS. The left sidebar lists various S3 features and settings, such as General purpose buckets, Access Points, and Storage Lens. The "Intelligent-Tiering Archive configurations" section at the bottom is empty, with options to view details, edit, delete, or create a configuration.
-![IMG-20241214-WA0019](https://github.com/user-attachments/assets/fab8fe7a-26bf-4c54-99da-7a7d74afcc7a)
-This screenshot is part of a data security step within the street trees project. It involves creating and managing encryption keys in AWS KMS to ensure secure data handling and encryption practices. The keys created here will be used to encrypt and decrypt sensitive data, providing a layer of security for the project's data assets.
-
-### 2. Amazon Athena Query Results
+This screenshot is part of a data visualization step within the street trees project. It involves analyzing and presenting the data on tree planting activities to understand seasonal trends and species distribution. This visual representation helps in identifying the peak planting periods and the diversity of species planted throughout the year, providing valuable insights for planning and resource allocation in future planting activities.
+### Data observerbility
 ![IMG-20241214-WA0024](https://github.com/user-attachments/assets/66c67a2d-7a29-40da-b088-4523bb5b6de5)
 
 - **Description**: The screenshot shows a SQL query executed in Amazon Athena.
@@ -126,7 +134,17 @@ This screenshot is part of a data security step within the street trees project.
   - The query retrieves all rows from a table named `tra-user` in the `street_trees-datacatalog-sau` database.
   - The results include columns like `tree_id`, `civic_number`, `std_street`, `genus_name`, `species_name`, `common_name`, and neighborhood details.
   - The output confirms successful querying and displays 536 records.
-## Data management and cost optimization
+## Data Protection
+![Ingestion3](https://github.com/user-attachments/assets/be34ffa8-90e1-490d-9c39-82be80dbb90b)
+
+The image is a screenshot of an Amazon S3 bucket configuration page from the AWS Management Console. It shows the settings for the bucket named "van-sttrs-raw-sau" in the N. Virginia region. The "Default encryption" section indicates that server-side encryption is automatically applied to new objects stored in this bucket using AWS Key Management Service (KMS) keys (SSE-KMS). The encryption key ARN is provided, and the bucket key is enabled, which helps reduce encryption costs by lowering calls to AWS KMS. The left sidebar lists various S3 features and settings, such as General purpose buckets, Access Points, and Storage Lens. The "Intelligent-Tiering Archive configurations" section at the bottom is empty, with options to view details, edit, delete, or create a configuration.
+![IMG-20241214-WA0019](https://github.com/user-attachments/assets/fab8fe7a-26bf-4c54-99da-7a7d74afcc7a)
+This screenshot is part of a data security step within the street trees project. It involves creating and managing encryption keys in AWS KMS to ensure secure data handling and encryption practices. The keys created here will be used to encrypt and decrypt sensitive data, providing a layer of security for the project's data assets.
+
+
+  - 
+# DAP ESTIMATED COST
+### Data management and cost optimization
 ![IMG-20241214-WA0016](https://github.com/user-attachments/assets/5d5c147e-4a24-4010-b2db-0ba35ad29f78)
 
 The image shows the "Lifecycle configuration" page for an Amazon S3 bucket. This page allows users to manage the lifecycle of objects stored in the bucket by defining rules that specify actions such as transitioning objects to another storage class, archiving them, or deleting them after a specified period of time. The page displays one lifecycle rule named "Move_To_Cheaper_Storage_Class," which is enabled. This rule applies to the entire bucket and transitions the current version of objects to the Glacier Flexible Retrieval storage class. There are options to view details, edit, delete, and create new lifecycle rules.
@@ -136,8 +154,3 @@ This screenshot is part of a data management and cost optimization step within t
 
 The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) Endpoints section. The console displays details about a specific VPC endpoint named "street-trees-s3endpoint-sau."
 This screenshot is part of a data connectivity step within the street trees project. This step involves configuring VPC endpoints to establish secure and efficient connections between the VPC and AWS services, in this case, Amazon S3. This ensures that data can be accessed and transferred within the private network without exposing it to the internet, enhancing security and performance
-## Data visualization 
-![IMG-20241214-WA0023](https://github.com/user-attachments/assets/aa98e532-85ac-4ddc-8995-20f72b4b4103)
-The image shows a bar chart from a data analysis tool, configured to display the count of different tree species planted over time. The X-axis represents the date planted, broken down by month for the year 2019. The Y-axis represents the count of trees planted. Each species is represented by a different color, as indicated by the legend at the bottom of the chart. The chart highlights that the highest number of trees were planted in December 2019, followed by February 2019, with the most frequently planted species represented in colors such as green, yellow, and red.
-
-This screenshot is part of a data visualization step within the street trees project. It involves analyzing and presenting the data on tree planting activities to understand seasonal trends and species distribution. This visual representation helps in identifying the peak planting periods and the diversity of species planted throughout the year, providing valuable insights for planning and resource allocation in future planting activities.
