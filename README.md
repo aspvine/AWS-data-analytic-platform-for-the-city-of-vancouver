@@ -2,6 +2,8 @@
 # Data-analyst-saurabh
 ## Project Overview
 This project focuses on analyzing data related to street trees using AWS Glue, Amazon Athena, and AWS Data Catalog. The workflow includes data ingestion, schema creation, and querying the data to derive insights.
+Let’s assume that The City of Vancouver needs to migrate to AWS. They hired you as the data team to implement a data analytic platform. We need to follow the following steps to help them reach their goals.
+![Screenshot 2024-12-14 171850](https://github.com/user-attachments/assets/391dd05c-0a9d-4bde-b600-f31729f358ba)
 
 ---
 
@@ -24,11 +26,11 @@ started
 The interface also includes options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the selected objects. There are also options to create a folder and upload files.
 ![IMG-20241214-WA0013](https://github.com/user-attachments/assets/455e4625-9908-4469-8d48-b7e92f6b0c69)
 This screenshot is part of a data ingestion step within the street trees project. It involves uploading and organizing CSV files into an S3 bucket to store the raw data. This data will later be used in subsequent steps of the project for processing, analysis, or reporting.
-## data Profiling
+## Data Profiling
 ![Profiling 1](https://github.com/user-attachments/assets/8aa44664-dcb2-41f0-b782-0256a32477ab)
 
 The image shows an Amazon S3 (Simple Storage Service) interface displaying the contents of a bucket named "van-sttrs-tra-sau" under the folder path "Street_Trees/Data-Profiling/User/". The interface is in the "Objects" tab, which lists the objects stored in this directory
-## data infrastructure set up
+## Data infrastructure set up
 ![IMG-20241214-WA0008](https://github.com/user-attachments/assets/abe802fb-87de-4d80-8bd0-a627c88e801a)
 
 The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) dashboard. The dashboard displays a list of VPCs under the "Your VPCs" section. There are two VPCs listed: one named "Street_Trees-vpc" with the VPC ID  and an IPv4 CIDR of "10.0.0.0/27", and another unnamed VPC with the VPC ID "vpc-01ba463659f74488f" and an IPv4 CIDR of "172.31.0.0/16". Both VPCs are in the "Available" state and have "Block Public Access" set to "Off". The left sidebar contains various options related to the VPC, such as Subnets, Route tables, Internet gateways, and more. The top bar shows the current region as "N. Virginia" and the logged-in user details. The "Create VPC" button is also visible on the top right corner.
@@ -44,7 +46,7 @@ Two instances are listed.
 
 Both instances are in the "Running" state.
 
-## data process
+## Data process
 ###![Extraction1](https://github.com/user-attachments/assets/1bb1f7cf-77b6-4e5e-bf20-a2f7c26ee965)
  1. AWS Glue Crawlers Setup
 
@@ -64,7 +66,7 @@ The image shows an AWS Glue Studio interface with a visual representation of an 
 
 
 
-## data storage and organization
+## Data storage and organization
 ![Cleaning1](https://github.com/user-attachments/assets/92da8f39-8bcc-4473-befe-4c9416d69bd7)
 
 The image is a screenshot of an Amazon S3 console, showing the contents of a bucket named "van-sttrs-tra-sau" within the folder "Street_Trees/Data-Cleaning/User/". This folder contains one object named "van-sttrs-sau_26Nov2024_1732606239969/", which is a subfolder. The console provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the objects. The navigation breadcrumbs at the top indicate the path within the S3 bucket.
@@ -74,7 +76,7 @@ This screenshot is part of a data storage and organization step within the same 
 The image shows an Amazon S3 (Simple Storage Service) interface from AWS (Amazon Web Services). The specific view is of a bucket named "van-sttrs-tra-sau" with a folder named "Street_Trees/Planted_Trees_As_Per_Street_Side_Name/System/". The "Objects" tab is selected, displaying 
  The storage class for both files is "Standard".
 The interface provides options to copy the S3 URI, copy the URL, download, open, delete, and perform other actions on the files. There are also options to create a folder and upload files. The left sidebar includes various sections such as Buckets, Access Grants, Access Points, and Storage Lens, among others.
-## data management
+## Data management
 ![Profiling2](https://github.com/user-attachments/assets/dbb5767b-9994-47d0-b022-85985eef9781)
 
 The image shows an Amazon S3 (Simple Storage Service) console interface. The specific bucket being viewed is named "van-sttrs-raw-sau." The interface displays two folders within this bucket: "ingestion_year=1991/" and "Street_Trees_ClickStreams/". The interface provides options to perform actions such as copying the S3 URI, copying the URL, downloading, opening, deleting, and creating folders. There is also an option to upload files.
@@ -124,17 +126,17 @@ This screenshot is part of a data security step within the street trees project.
   - The query retrieves all rows from a table named `tra-user` in the `street_trees-datacatalog-sau` database.
   - The results include columns like `tree_id`, `civic_number`, `std_street`, `genus_name`, `species_name`, `common_name`, and neighborhood details.
   - The output confirms successful querying and displays 536 records.
-## data management and cost optimization
+## Data management and cost optimization
 ![IMG-20241214-WA0016](https://github.com/user-attachments/assets/5d5c147e-4a24-4010-b2db-0ba35ad29f78)
 
 The image shows the "Lifecycle configuration" page for an Amazon S3 bucket. This page allows users to manage the lifecycle of objects stored in the bucket by defining rules that specify actions such as transitioning objects to another storage class, archiving them, or deleting them after a specified period of time. The page displays one lifecycle rule named "Move_To_Cheaper_Storage_Class," which is enabled. This rule applies to the entire bucket and transitions the current version of objects to the Glacier Flexible Retrieval storage class. There are options to view details, edit, delete, and create new lifecycle rules.
 This screenshot is part of a data management and cost optimization step within the street trees project. It involves configuring lifecycle rules to automate the transition of data to more cost-effective storage classes over time, ensuring efficient storage management while maintaining data accessibility and reducing costs.
-## data connectivity 
+## Data connectivity 
 ![IMG-20241214-WA0020](https://github.com/user-attachments/assets/7fb90a55-d0e5-46a4-9846-8704c023aad4)
 
 The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) Endpoints section. The console displays details about a specific VPC endpoint named "street-trees-s3endpoint-sau."
 This screenshot is part of a data connectivity step within the street trees project. This step involves configuring VPC endpoints to establish secure and efficient connections between the VPC and AWS services, in this case, Amazon S3. This ensures that data can be accessed and transferred within the private network without exposing it to the internet, enhancing security and performance
-## data visualization 
+## Data visualization 
 ![IMG-20241214-WA0023](https://github.com/user-attachments/assets/aa98e532-85ac-4ddc-8995-20f72b4b4103)
 The image shows a bar chart from a data analysis tool, configured to display the count of different tree species planted over time. The X-axis represents the date planted, broken down by month for the year 2019. The Y-axis represents the count of trees planted. Each species is represented by a different color, as indicated by the legend at the bottom of the chart. The chart highlights that the highest number of trees were planted in December 2019, followed by February 2019, with the most frequently planted species represented in colors such as green, yellow, and red.
 
