@@ -54,7 +54,7 @@ Two instances are listed.
 Both instances are in the "Running" state.
 # EXPLORATORY ANALYSIS
 
-## Data injestion
+## Data ingestion
 
 ![IMG-20241214-WA0013](https://github.com/user-attachments/assets/455e4625-9908-4469-8d48-b7e92f6b0c69)
 This screenshot is part of a data ingestion step within the street trees project. It involves uploading and organizing CSV files into an S3 bucket to store the raw data. This data will later be used in subsequent steps of the project for processing, analysis, or reporting.
