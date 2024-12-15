@@ -2,7 +2,7 @@
 # Data-analyst-saurabh
 
 # DAP design and implementation
-##Introduction
+## Introduction
 ## Project Overview
 This project focuses on analyzing data related to street trees using AWS Glue, Amazon Athena, and AWS Data Catalog. The workflow includes data ingestion, schema creation, and querying the data to derive insights.
 Let’s assume that The City of Vancouver needs to migrate to AWS. They hired you as the data team to implement a data analytic platform. We need to follow the following steps to help them reach their goals.
