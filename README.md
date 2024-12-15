@@ -141,7 +141,11 @@ This screenshot is part of a data visualization step within the street trees pro
 The image is a screenshot of an Amazon S3 bucket configuration page from the AWS Management Console. It shows the settings for the bucket named "van-sttrs-raw-sau" in the N. Virginia region. The "Default encryption" section indicates that server-side encryption is automatically applied to new objects stored in this bucket using AWS Key Management Service (KMS) keys (SSE-KMS). The encryption key ARN is provided, and the bucket key is enabled, which helps reduce encryption costs by lowering calls to AWS KMS. The left sidebar lists various S3 features and settings, such as General purpose buckets, Access Points, and Storage Lens. The "Intelligent-Tiering Archive configurations" section at the bottom is empty, with options to view details, edit, delete, or create a configuration.
 ![IMG-20241214-WA0019](https://github.com/user-attachments/assets/fab8fe7a-26bf-4c54-99da-7a7d74afcc7a)
 This screenshot is part of a data security step within the street trees project. It involves creating and managing encryption keys in AWS KMS to ensure secure data handling and encryption practices. The keys created here will be used to encrypt and decrypt sensitive data, providing a layer of security for the project's data assets.
+## Data connectivity 
+![IMG-20241214-WA0020](https://github.com/user-attachments/assets/7fb90a55-d0e5-46a4-9846-8704c023aad4)
 
+The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) Endpoints section. The console displays details about a specific VPC endpoint named "street-trees-s3endpoint-sau."
+This screenshot is part of a data connectivity step within the street trees project. This step involves configuring VPC endpoints to establish secure and efficient connections between the VPC and AWS services, in this case, Amazon S3. This ensures that data can be accessed and transferred within the private network without exposing it to the internet, enhancing security and performance
 
   - 
 # DAP ESTIMATED COST
@@ -150,11 +154,7 @@ This screenshot is part of a data security step within the street trees project.
 
 The image shows the "Lifecycle configuration" page for an Amazon S3 bucket. This page allows users to manage the lifecycle of objects stored in the bucket by defining rules that specify actions such as transitioning objects to another storage class, archiving them, or deleting them after a specified period of time. The page displays one lifecycle rule named "Move_To_Cheaper_Storage_Class," which is enabled. This rule applies to the entire bucket and transitions the current version of objects to the Glacier Flexible Retrieval storage class. There are options to view details, edit, delete, and create new lifecycle rules.
 This screenshot is part of a data management and cost optimization step within the street trees project. It involves configuring lifecycle rules to automate the transition of data to more cost-effective storage classes over time, ensuring efficient storage management while maintaining data accessibility and reducing costs.
-## Data connectivity 
-![IMG-20241214-WA0020](https://github.com/user-attachments/assets/7fb90a55-d0e5-46a4-9846-8704c023aad4)
 
-The image shows the AWS Management Console, specifically the VPC (Virtual Private Cloud) Endpoints section. The console displays details about a specific VPC endpoint named "street-trees-s3endpoint-sau."
-This screenshot is part of a data connectivity step within the street trees project. This step involves configuring VPC endpoints to establish secure and efficient connections between the VPC and AWS services, in this case, Amazon S3. This ensures that data can be accessed and transferred within the private network without exposing it to the internet, enhancing security and performance
 # Conclusion and findings
 The project utilizes a comprehensive data workflow involving AWS services to handle and analyze data related to street trees effectively. 
 
